@@ -547,6 +547,7 @@ a {
 /* line 346 */
 .container #lore .resume_content ul li {
   list-style-type: disc;
+  padding-top:6px!important;
 }
 .container #lore .resume_content ol li:last-child {
     padding-top:12px;
