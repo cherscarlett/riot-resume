@@ -548,6 +548,9 @@ a {
 .container #lore .resume_content ul li {
   list-style-type: disc;
 }
+.container #lore .resume_content ol li:last-child {
+    padding-top:12px;
+}
 /* line 348 */
 .container #tips {
   background: url(/images/tips_bg.jpg) top left no-repeat;
