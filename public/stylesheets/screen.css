@@ -571,7 +571,7 @@ a {
   margin-left: 20px;
   line-height: 18px;
   list-style-type: disc;
-  padding: 6px 0;
+  padding: 6px 0!important;
   font-size: 15px;
   text-shadow: 0 0 0.2em #0b35ac, 0 0 0.2em #0b35ac;
 }
