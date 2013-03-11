@@ -1,0 +1,574 @@
+/* line 17, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Friz";
+  src: url("/fonts/Friz Quadrata Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* line 6 */
+body {
+  background-color: black;
+  font-family: "Arial Narrow", Arial, Sans, Sans-Serif;
+  color: white;
+}
+
+/* line 10 */
+.hidden {
+  display: none;
+}
+
+/* line 12 */
+h1, h2, h3 {
+  font-family: "Friz";
+  color: #065ded;
+}
+
+/* line 15 */
+em {
+  font-style: italic;
+}
+
+/* line 17 */
+a {
+  text-decoration: none;
+  font-family: "Friz";
+}
+
+/* line 20 */
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 1210px;
+  height: 755px;
+  margin: 20px auto;
+}
+/* line 26 */
+.container footer {
+  text-align: center;
+  clear: both;
+  padding-top: 15px;
+  color: #fcd747;
+  font-family: "Friz";
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.5)));
+}
+/* line 33 */
+.container #sidebar {
+  float: left;
+  width: 140px;
+  height: 715px;
+  background: url(/images/left_panel_bg.jpg) 0 -1px no-repeat;
+}
+/* line 38 */
+.container #sidebar h1 {
+  text-indent: -10000px;
+  width: 65px;
+  height: 33px;
+  background: url(/images/asset_sprite.png) -154px -211px no-repeat;
+  margin: 18px auto 0 auto;
+}
+/* line 44 */
+.container #sidebar img {
+  display: block;
+  margin: auto;
+}
+/* line 47 */
+.container #sidebar nav {
+  margin-top: 5px;
+}
+/* line 49 */
+.container #sidebar li {
+  margin-left: 7px;
+  font-size: 12px;
+}
+/* line 52 */
+.container #sidebar li a {
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 39px;
+  text-align: right;
+  line-height: 39px;
+  padding-right: 10px;
+  background: url(/images/side_panel_button_states.png) top left no-repeat;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+/* line 64 */
+.container #sidebar li a p {
+  position: relative;
+  z-index: 2;
+}
+/* line 67 */
+.container #sidebar li a span {
+  z-index: 1;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  background: url(/images/side_panel_button_states.png) bottom left no-repeat;
+  display: block;
+  width: 130px;
+  height: 39px;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+/* line 79 */
+.container #sidebar li a:link, .container #sidebar li a:visited {
+  color: #c2cddd;
+  font-weight: normal;
+}
+/* line 82 */
+.container #sidebar li a:hover, .container #sidebar li a:active {
+  color: white;
+  font-weight: normal;
+  text-shadow: 0 0 0.2em #0b35ac, 0 0 0.2em #0b35ac;
+}
+/* line 86 */
+.container #sidebar li a:hover span, .container #sidebar li a:active span {
+  opacity: 1;
+}
+/* line 89 */
+.container #sidebar li.current a {
+  color: white;
+  font-weight: normal;
+  text-shadow: 0 0 0.2em #0b35ac, 0 0 0.2em #0b35ac;
+  cursor: default;
+}
+/* line 94 */
+.container #sidebar li.current a span {
+  opacity: 1;
+}
+/* line 96 */
+.container #main {
+  float: right;
+  width: 1070px;
+  height: 715px;
+  background: url(/images/default_bg.jpg) top left no-repeat;
+}
+/* line 101 */
+.container .main_section {
+  padding: 34px 40px 0 70px;
+  width: 960px;
+  height: 715px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+/* line 111 */
+.container .active {
+  opacity: 1;
+  z-index: 1;
+}
+/* line 114 */
+.container #overview {
+  background: url(/images/overview_bg.jpg) top left no-repeat;
+}
+/* line 116 */
+.container #overview header {
+  height: 60px;
+  width: 210px;
+  background: url(/images/asset_sprite.png) -158px -276px no-repeat;
+}
+/* line 120 */
+.container #overview .attributes_box {
+  height: 284px;
+  width: 284px;
+  background: url(/images/attributes_box.png) top left no-repeat;
+  padding: 40px 0 0 14px;
+}
+/* line 125 */
+.container #overview .attributes_box li {
+  float: left;
+  width: 45px;
+  height: 45px;
+}
+/* line 129 */
+.container #overview .attributes_box span {
+  opacity: 0;
+  font-family: "Friz";
+  position: absolute;
+  color: #e1e5ef;
+  font-size: 14px;
+  padding: 8px 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 1px solid #606060;
+  margin-top: 30px;
+  margin-left: 30px;
+  cursor: default;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+/* line 146 */
+.container #overview .attributes_box li:hover span {
+  opacity: 1;
+}
+/* line 148 */
+.container #overview .attributes_box #stats {
+  clear: both;
+  padding-top: 24px;
+}
+/* line 151 */
+.container #overview .attributes_box #stats li {
+  float: none;
+  height: 20px;
+  width: 180px;
+}
+/* line 155 */
+.container #overview .attributes_box #stats span {
+  border: 0;
+  margin-top: 10px;
+  font-size: 11px;
+}
+/* line 159 */
+.container #overview .attributes_box div {
+  padding: 38px 0 0 6px;
+  font-size: 14px;
+  color: #7d8189;
+}
+/* line 163 */
+.container #overview .match_history {
+  width: 925px;
+  height: 230px;
+  padding: 40px 0 0 100px;
+  position: relative;
+}
+/* line 168 */
+.container #overview .match_history h1 {
+  position: absolute;
+  text-indent: -10000px;
+  top: -30px;
+  left: 5px;
+  height: 35px;
+  width: 185px;
+  background: url(/images/asset_sprite.png) -156px -146px no-repeat;
+}
+/* line 176 */
+.container #overview .match_history .wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 925px;
+  height: 230px;
+}
+/* line 181 */
+.container #overview .match_history #coverflow {
+  top: 0;
+  left: 0;
+  position: absolute;
+  margin-top: 50px;
+  width: 2025px;
+  height: 230px;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0) scale(0.95);
+}
+/* line 189 */
+.container #overview .match_history #coverflow img {
+  cursor: default !important;
+  float: left;
+  position: relative;
+  height: 220px;
+  width: 281px;
+  margin: -64px;
+}
+/* line 196 */
+.container #overview .match_history #coverflow .ui-selected {
+  margin-top: -64px !important;
+}
+/* line 198 */
+.container #abilities {
+  background: url(/images/abilities_bg.jpg) top left no-repeat;
+}
+/* line 200 */
+.container #abilities nav {
+  position: absolute;
+  right: 40px;
+  margin-top: 17px;
+  width: 317px;
+  z-index: 2;
+}
+/* line 206 */
+.container #abilities nav li {
+  margin-bottom: 7px;
+  background: url(/images/abilities_button_states.png) 0 50% no-repeat;
+  height: 70px;
+  line-height: 70px;
+  width: 317px;
+  cursor: pointer;
+}
+/* line 213 */
+.container #abilities nav li a, .container #abilities nav li a:link, .container #abilities nav li a:visited, .container #abilities nav li a:active {
+  display: block;
+  height: 70px;
+  width: 317px;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+  background: url(/images/abilities_button_states.png) bottom left no-repeat;
+  position: relative;
+  transition: color 0.6s;
+  -moz-transition: color 0.6s;
+  -webkit-transition: color 0.6s;
+}
+/* line 225 */
+.container #abilities nav li a p, .container #abilities nav li a:link p, .container #abilities nav li a:visited p, .container #abilities nav li a:active p {
+  position: relative;
+  z-index: 2;
+  background: url(/images/asset_sprite.png) -39px -344px no-repeat;
+  text-indent: 80px;
+}
+/* line 230 */
+.container #abilities nav li a span, .container #abilities nav li a:link span, .container #abilities nav li a:visited span, .container #abilities nav li a:active span {
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+  height: 70px;
+  width: 317px;
+  background: url(/images/abilities_button_states.png) 0 50% no-repeat;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+/* line 243 */
+.container #abilities nav li a:hover span {
+  opacity: 1;
+}
+/* line 245 */
+.container #abilities nav li.current_ability {
+  background-position: top left;
+  cursor: default;
+}
+/* line 248 */
+.container #abilities nav li.current_ability a {
+  background-position: top left;
+  cursor: default;
+  color: #065ded;
+}
+/* line 252 */
+.container #abilities nav li.current_ability a span {
+  opacity: 0;
+}
+/* line 255 */
+.container #abilities nav li#photography_tab p {
+  background-position: -38px -498px;
+}
+/* line 258 */
+.container #abilities nav li#gaming_tab p {
+  background-position: -38px -422px;
+}
+/* line 261 */
+.container #abilities nav li#entertaining_tab p {
+  background-position: -38px -575px;
+}
+/* line 264 */
+.container #abilities nav li#graphics_tab p {
+  background-position: -38px -649px;
+}
+/* line 266 */
+.container #abilities section {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+/* line 273 */
+.container #abilities section .image {
+  margin-top: 20px;
+  margin-left: -28px;
+  height: 360px;
+}
+/* line 277 */
+.container #abilities section .content {
+  width: 605px;
+  padding-top: 40px;
+}
+/* line 280 */
+.container #abilities section .content h2 {
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+}
+/* line 284 */
+.container #abilities section .content p {
+  padding-top: 10px;
+  text-shadow: 0 0 0.2em #0b35ac, 0 0 0.2em #0b35ac;
+  line-height: 18px;
+  font-size: 14px;
+}
+/* line 290 */
+.container #abilities #coding .image {
+  margin-left: 0;
+  margin-top: 40px;
+  height: 340px;
+}
+/* line 294 */
+.container #abilities .active_ability {
+  opacity: 1;
+  z-index: 1;
+}
+/* line 297 */
+.container #lore {
+  background: url(/images/lore_bg.jpg) top left no-repeat;
+}
+/* line 299 */
+.container #lore #blue_glow {
+  background: url(/images/blue_glow.png) top left no-repeat;
+  position: absolute;
+  top: 8px;
+  left: -16px;
+  height: 338px;
+  width: 625px;
+  z-index: 10;
+  opacity: 0;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+}
+/* line 311 */
+.container #lore .resume_content {
+  padding: 123px 70px 0 70px;
+  height: 450px;
+  width: 775px;
+}
+/* line 315 */
+.container #lore .resume_content h2 {
+  font-size: 20px;
+  font-variant: small-caps;
+  position: relative;
+  color: #31231e;
+  font-weight: bold;
+  float: left;
+  width: 500px;
+}
+/* line 323 */
+.container #lore .resume_content h2 span {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  color: black;
+  text-shadow: 0 0 0.2em #21231e;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+}
+/* line 330 */
+.container #lore .resume_content p.location {
+  text-align: right;
+  font-family: "Friz";
+  color: #311e02;
+}
+/* line 334 */
+.container #lore .resume_content h3 {
+  clear: both;
+  color: #52341f;
+  font-family: "Arial Narrow", Arial, Sans, Sans-Serif;
+}
+/* line 338 */
+.container #lore .resume_content p.timespan {
+  font-size: 14px;
+  color: #52341f;
+  font-style: italic;
+}
+/* line 342 */
+.container #lore .resume_content ul {
+  padding: 6px 0 12px 30px;
+  color: #5d1d1c;
+  font-size: 15px;
+}
+/* line 346 */
+.container #lore .resume_content ul li {
+  list-style-type: disc;
+}
+/* line 348 */
+.container #tips {
+  background: url(/images/tips_bg.jpg) top left no-repeat;
+}
+/* line 350 */
+.container #tips ul {
+  padding-top: 50px;
+  width: 635px;
+  padding-bottom: 0px;
+}
+/* line 354 */
+.container #tips ul h2 {
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+  padding-bottom: 6px;
+}
+/* line 357 */
+.container #tips ul li {
+  margin-left: 20px;
+  line-height: 18px;
+  list-style-type: disc;
+  padding: 6px 0;
+  font-size: 15px;
+  text-shadow: 0 0 0.2em #0b35ac, 0 0 0.2em #0b35ac;
+}
