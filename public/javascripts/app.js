@@ -38,6 +38,7 @@ function glow() {
 
 $(document).ready(function() {
     glow();
+    history.replaceState(null, null, window.location.href);
 });
 
 window.addEventListener('popstate', function(e) {
