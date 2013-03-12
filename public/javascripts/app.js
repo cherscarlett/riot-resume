@@ -1,14 +1,15 @@
 $("#sidebar nav li").live("click", function(){
     var selectedTab = $(this).attr("id").replace("_tab", "");
     var link = (selectedTab != 'overview') ? "/"+selectedTab : "/"; 
-   loadContent("main", selectedTab, link);
+    loadContent("main", selectedTab, link);
 });
 
 $("#abilities nav li").live("click", function(){
     var selectedTab = $(this).attr("id").replace("_tab", "");
     var link = (selectedTab != 'coding') ? "/abilities/"+selectedTab : "/abilities";
-   loadContent("ability", selectedTab, link);
+    loadContent("ability", selectedTab, link);
 });
+
 function loadContent(type, selectedTab, link) {
     if (type == "main") {
        $("#sidebar .current").removeClass("current");
@@ -28,24 +29,27 @@ function loadContent(type, selectedTab, link) {
     }
     history.pushState(null, null, link);
 }
+
 function glow() {
     setTimeout(function(){
         $("#blue_glow").css("opacity", "1.0");
     }, 2000);
 }
+
 $(document).ready(function() {
     glow();
 });
 
 window.addEventListener('popstate', function(e) {
-  p = window.location.href.toString().split("/")[3];
-  if (p == "abilities") {
-      a = window.location.href.toString().split("/")[4];
-      loadContent("ability", a, null);
-  }
-  else {
-      loadContent("main", p, null);
-  }
+    loc = window.location.href.toString();
+    p = loc.split("/")[3];
+    if (p == "abilities") {
+        a = loc.split("/")[4];
+        loadContent("ability", a, null);
+    }
+    else {
+        loadContent("main", p, null);
+    }
 });
 $(function () {
 
