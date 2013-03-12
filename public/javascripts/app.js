@@ -41,16 +41,27 @@ $(document).ready(function() {
 });
 
 window.addEventListener('popstate', function(e) {
-    loc = window.location.href.toString();
+    var loc = window.location.href.toString();
     p = loc.split("/")[3];
     if (p == "abilities") {
         a = loc.split("/")[4];
-        loadContent("ability", a, null);
+        if (a) {
+            loadContent("ability", a, null);
+        }
+        else {
+            loadContent("ability", "coding", null);
+        }
     }
     else {
-        loadContent("main", p, null);
+        if (p) {
+            loadContent("main", p, null);
+        }
+        else {
+            loadContent("main", "overview", null);
+        }
     }
 });
+
 $(function () {
 
     var coverflowApp = coverflowApp || {};
