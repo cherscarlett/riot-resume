@@ -1,28 +1,32 @@
 $("#sidebar nav li").live("click", function(){
     var selectedTab = $(this).attr("id").replace("_tab", "");
     var link = (selectedTab != 'overview') ? "/"+selectedTab : "/"; 
-   $("#sidebar .current").removeClass("current");
-   $(this).addClass("current"); 
-   $("#main .active").removeClass("active");
-   $("#"+selectedTab).addClass("active");
-   $("#blue_glow").css("opacity", "0");
-   if (selectedTab == "lore") {
-       glow();   
-   }
-   history.pushState(null, null, link);
+   loadContent("main", selectedTab, link);
 });
 
 $("#abilities nav li").live("click", function(){
     var selectedTab = $(this).attr("id").replace("_tab", "");
     var link = (selectedTab != 'coding') ? "/abilities/"+selectedTab : "/abilities";
-   $("#abilities .current_ability").removeClass("current_ability");
-   $(this).addClass("current_ability"); 
-   $("#abilities .active_ability").removeClass("active_ability");
-   $("#"+selectedTab).addClass("active_ability");
-   history.pushState(null, null, link);
+   loadContent("ability", selectedTab, link);
 });
-function loadContent(type) {
-    
+function loadContent(type, selectedTab, link) {
+    if (type == "main") {
+       $("#sidebar .current").removeClass("current");
+       $("#"+selectedTab+"_tab").addClass("current"); 
+       $("#main .active").removeClass("active");
+       $("#"+selectedTab).addClass("active");
+       $("#blue_glow").css("opacity", "0");
+       if (selectedTab == "lore") {
+           glow();   
+       }
+    }
+    else {
+       $("#abilities .current_ability").removeClass("current_ability");
+       $("#"+selectedTab+"_tab").addClass("current_ability"); 
+       $("#abilities .active_ability").removeClass("active_ability");
+       $("#"+selectedTab).addClass("active_ability");
+    }
+    history.pushState(null, null, link);
 }
 function glow() {
     setTimeout(function(){
@@ -33,6 +37,16 @@ $(document).ready(function() {
     glow();
 });
 
+window.addEventListener('popstate', function(e) {
+  p = window.location.href.toString().split("/")[3];
+  if (p == "abilities") {
+      a = window.location.href.toString().split("/")[4];
+      loadContent("ability", a, null);
+  }
+  else {
+      loadContent("main", p, null);
+  }
+});
 $(function () {
 
     var coverflowApp = coverflowApp || {};
