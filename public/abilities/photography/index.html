@@ -5,7 +5,7 @@
     <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"/><link href="/stylesheets/jquery-ui-1.8.5.custom.css" media="all" rel="stylesheet" type="text/css"/><link href="/stylesheets/jquery.mCustomScrollbar.css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-    <script language="javascript" src="/javascripts/jquery-1.6.2.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/ui.coverflow.js" type="text/javascript"></script><script language="javascript" src="/javascripts/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/jquery.mousewheel.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/app.js" type="text/javascript"></script>
+    <script language="javascript" src="/javascripts/jquery-1.6.2.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/ui.coverflow.js" type="text/javascript"></script><script language="javascript" src="/javascripts/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/jquery.mousewheel.min.js" type="text/javascript"></script><script language="javascript" src="/javascripts/app.js" type="text/javascript"></script>
     <script>(function($){ $(window).load(function(){ $('.resume_content').mCustomScrollbar({theme:'dark-thin'});});})(jQuery);</script>
   </head>
   <body>
@@ -16,15 +16,15 @@
     <img alt="Champion profile picture" src="/images/champion_profile_picture.jpg"/>
     <nav>
       <ul>
-        <li class='current' id='overview_tab'><a href="javascript:;"><p>Overview</p> <span></span></a></li>
-        <li id='abilities_tab'><a href="javascript:;"><p>Abilities</p> <span></span></a></li>
+        <li id='overview_tab'><a href="javascript:;"><p>Overview</p> <span></span></a></li>
+        <li class='current' id='abilities_tab'><a href="javascript:;"><p>Abilities</p> <span></span></a></li>
         <li id='lore_tab'><a href="javascript:;"><p>Lore</p> <span></span></a></li>
         <li id='tips_tab'><a href="javascript:;"><p>Tips</p> <span></span></a></li>
       </ul>
     </nav>
   </section>
   <section id='main'>
-    <section class='main_section active' id='overview'>
+    <section class='main_section' id='overview'>
       <header>
         <h1 class='hidden'>Overview</h1>
         <h2 class='hidden'>Cher Stewart, the Web's Adventurist</h2>
@@ -91,20 +91,20 @@
         </div>
       </section>
     </section>
-    <section class='main_section' id='abilities'>
+    <section class='main_section active' id='abilities'>
       <header>
         <h1 class='hidden'>Abilities</h1>
         <nav>
           <ul>
-            <li class='current_ability' id='coding_tab'><a href="javascript:;"><p>Coding &amp; Dev</p> <span></span></a></li>
+            <li id='coding_tab'><a href="javascript:;"><p>Coding &amp; Dev</p> <span></span></a></li>
             <li id='gaming_tab'><a href="javascript:;"><p>Gaming</p> <span></span></a></li>
-            <li id='photography_tab'><a href="javascript:;"><p>Photography</p> <span></span></a></li>
+            <li class='current_ability' id='photography_tab'><a href="javascript:;"><p>Photography</p> <span></span></a></li>
             <li id='entertaining_tab'><a href="javascript:;"><p>Entertaining</p> <span></span></a></li>
             <li id='graphics_tab'><a href="javascript:;"><p>Graphic Arts &amp; Editing</p> <span></span></a></li>
           </ul>
         </nav>
       </header>
-      <section class='active_ability' id='coding'>
+      <section id='coding'>
         <div class='image'><img alt="Coding abilities table" src="/images/coding_abilities_table.png"/></div>
         <div class='content'>
           <h2>Coding &amp; Development Skills</h2>
@@ -122,7 +122,7 @@
           <p>After a small break from the online gaming community to complete other important milestones, I started to play World of Warcraft and League of Legends... and I haven't stopped since.</p>
         </div>
       </section>
-      <section id='photography'>
+      <section class='active_ability' id='photography'>
         <div class='image'><img alt="Photography image" src="/images/photography_image.png"/></div>
         <div class='content'>
           <h2>Photography</h2>

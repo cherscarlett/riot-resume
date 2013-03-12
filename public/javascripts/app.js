@@ -1,6 +1,6 @@
 $("#sidebar nav li").live("click", function(){
     var selectedTab = $(this).attr("id").replace("_tab", "");
-    //var link = (selectedTab != 'overview') ? "/"+selectedTab : "/"; 
+    var link = (selectedTab != 'overview') ? "/"+selectedTab : "/"; 
    $("#sidebar .current").removeClass("current");
    $(this).addClass("current"); 
    $("#main .active").removeClass("active");
@@ -9,23 +9,30 @@ $("#sidebar nav li").live("click", function(){
    if (selectedTab == "lore") {
        glow();   
    }
-   //history.pushState(null, null, link);
+   history.pushState(null, null, link);
 });
 
 $("#abilities nav li").live("click", function(){
     var selectedTab = $(this).attr("id").replace("_tab", "");
-    //var link = (selectedTab != 'code') ? "/abilities/"+selectedTab : "/abilities";
+    var link = (selectedTab != 'coding') ? "/abilities/"+selectedTab : "/abilities";
    $("#abilities .current_ability").removeClass("current_ability");
    $(this).addClass("current_ability"); 
    $("#abilities .active_ability").removeClass("active_ability");
    $("#"+selectedTab).addClass("active_ability");
-   //history.pushState(null, null, link);
+   history.pushState(null, null, link);
 });
+function loadContent(type) {
+    
+}
 function glow() {
     setTimeout(function(){
         $("#blue_glow").css("opacity", "1.0");
     }, 2000);
 }
+$(document).ready(function() {
+    glow();
+});
+
 $(function () {
 
     var coverflowApp = coverflowApp || {};
